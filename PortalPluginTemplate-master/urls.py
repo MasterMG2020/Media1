@@ -9,7 +9,4 @@ urlpatterns = [
     # The URL defined to a hello world
     url(r'^helloworld/$', HelloWorldView, name='my_plugin_helloworld',
         kwargs={'template': 'portalplugintemplate/hello_world.html'}),
-
-    url(r'^SUS/$', HelloWorldView, name='SUS',
-        kwargs={'template': 'portalplugintemplate/SUS.html'}),
 ]
