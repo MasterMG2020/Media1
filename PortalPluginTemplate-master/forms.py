@@ -9,7 +9,8 @@ More info: https://docs.djangoproject.com/en/dev/topics/forms/
 
 
 class MyPluginForm(forms.ModelForm):
-    """ Main form for adding and editing MyPluginModel
+    """ 
+    Main form for adding and editing MyPluginModel
         
     """
     required_css_class = 'required'

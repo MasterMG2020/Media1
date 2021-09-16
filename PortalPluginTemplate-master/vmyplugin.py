@@ -20,13 +20,14 @@ class HelloWorldView(ClassView):
     def __call__(self):
                 
         extra_context = {'plugin_message':_("Hello World")}
-        messages.success(self.request, message=_("Hello World message successfully sent"))
+        messages.success(self.request, message=_("Hello World message successfully sent"), message=_("SUS"))
         log.debug("Hello World message successfully sent")
         return self.main(self.request, self.template, extra_context)
 
 
 class MyPluginModelsView(ClassView):
-    """ View all MyPluginModels
+    """ 
+    View all MyPluginModels
     """
     def __call__(self):
         _objs = MyPluginModel.objects.all()
@@ -35,7 +36,8 @@ class MyPluginModelsView(ClassView):
 
 
 class MyPluginModelView(ClassView):
-    """ View a particular MyPluginModel
+    """ 
+    View a particular MyPluginModel
     """
     def __call__(self):
         self.slug = self.kwargs.get('slug')
@@ -58,7 +60,8 @@ class MyPluginModelView(ClassView):
 
 
 class MyPluginModelDeleteView(ClassView):
-    """ Delete a particular MyPluginModel
+    """ 
+    Delete a particular MyPluginModel
     """
     def __call__(self):
         if self.request.method == 'POST':
@@ -92,7 +95,8 @@ class MyPluginModelDeleteView(ClassView):
 
 
 class MyPluginModelAddView(ClassView):
-    """ Add a MyPluginModel
+    """ 
+    Add a MyPluginModel
     """
     def __call__(self):
         if self.request.method == 'POST':
@@ -111,7 +115,8 @@ class MyPluginModelAddView(ClassView):
 
 
 class MAMBackendInfoView(ClassView):
-    """ View info from MAM backend
+    """
+    View info from MAM backend
     """
     def __call__(self):
         if self.request.method == 'GET':
