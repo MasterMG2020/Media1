@@ -95,7 +95,7 @@ class MyPluginModelDeleteView(ClassView):
         return self.main(self.request, self.template, ctx)
 
 
-class MyPluginModelAddView(ClassView):
+class MyPluginModelAddView(ClassView): 
     """ 
     Add a MyPluginModel
     """
