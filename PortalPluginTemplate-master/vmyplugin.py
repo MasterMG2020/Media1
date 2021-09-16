@@ -20,7 +20,7 @@ class HelloWorldView(ClassView):
     def __call__(self):
                 
         extra_context = {'plugin_message':_("Hello World")}
-        messages.success(self.request, message=_("Hello World message successfully sent"), message=_("SUS"))
+        messages.success(self.request, message=_("Hello World message successfully sent"))
         log.debug("Hello World message successfully sent")
         return self.main(self.request, self.template, extra_context)
 
