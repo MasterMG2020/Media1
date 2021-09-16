@@ -11,5 +11,5 @@ urlpatterns = [
         kwargs={'template': 'portalplugintemplate/hello_world.html'}),
 
     url(r'^SUS/$', HelloWorldView, name='SUS',
-        kwargs={'template': 'portalplugintemplate/SUS'}),
+        kwargs={'template': 'portalplugintemplate/SUS.html'}),
 ]
