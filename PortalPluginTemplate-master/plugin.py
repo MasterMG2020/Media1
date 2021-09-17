@@ -102,3 +102,6 @@ class MyGearboxMenuPlugin(Plugin):
 
     def return_string(self, tagname, *args):
         return {'guid': self.plugin_guid, 'template': 'portalplugintemplate/gearbox_menu.html'}
+
+
+MyGearboxMenuPlugin()
