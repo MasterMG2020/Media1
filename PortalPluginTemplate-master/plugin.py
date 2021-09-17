@@ -27,7 +27,6 @@ class MyPluginURL(Plugin):
         self.plugin_guid = "906ec22a-bfd4-48be-8d57-4cf8f4cb2da8"
         log.debug("Initiated MyPluginURL")
 
-
 # Load the URL plugin
 MyPluginURL()
 
@@ -88,50 +87,18 @@ class MyNavBarPlugin(Plugin):
 MyNavBarPlugin()
 
 
-class MyGearboxMenuPlugin(Plugin):
-    implements(IPluginBlock)
+# class MyGearboxMenuPlugin(Plugin):
+#     implements(IPluginBlock)
 
-    def __init__(self):
-        # The name of the plugin which should match the pluginblock tag in the Portal template
-        # For instance as defined in media_view.html: {% pluginblock "MediaViewDropdown" %}
-        # This plugin is placed in the gearbox menu for the item.
-        self.name = "MediaViewDropdown"
-        # Define a GUID for each plugin.
-        # Use e.g. http://www.guidgenerator.com/
-        self.plugin_guid = "03eed808-5c6b-42a7-88a1-0336bcf790d1"
-        log.debug("Initiated MyGearboxMenuPlugin")
-
-    def return_string(self, tagname, *args):
-        return {'guid': self.plugin_guid, 'template': 'portalplugintemplate/gearbox_menu.html'}
-
-
-# MyGearboxMenuPlugin()
-
-
-# class ItemContextPlugin(Plugin):
-#     implements(IContextProcessor) 
-    
 #     def __init__(self):
-#         self.name = "ItemContextPlugin"
+#         # The name of the plugin which should match the pluginblock tag in the Portal template
+#         # For instance as defined in media_view.html: {% pluginblock "MediaViewDropdown" %}
+#         # This plugin is placed in the gearbox menu for the item.
+#         self.name = "MediaViewDropdown"
 #         # Define a GUID for each plugin.
 #         # Use e.g. http://www.guidgenerator.com/
-#         self.plugin_guid = "7d024a0e-47ea-45b7-93b9-ae115a8ee7fa"
-#         log.debug("Initiated ItemContextPlugin")
-        
-#     def __call__(self,context, class_object):
-#         from portal.vidispine.vitem import ItemView
-#         if isinstance(class_object, ItemView) is False:
-#             return context
+#         self.plugin_guid = "03eed808-5c6b-42a7-88a1-0336bcf790d1"
+#         log.debug("Initiated MyGearboxMenuPlugin")
 
-#         self.context = context
-#         self.class_object = class_object 
-#         #self.username = "test" 
-#         return self.process_context()
-    
-#     def process_context(self):
-#         extra_context = self.context.dicts[len(self.context.dicts)-1]
-#         # Do plugin stuff here and modify the extra_context
-#         # extra_context['my_new_data_key'] = 'my new data value' 
-
-#         return self.context
-
+#     def return_string(self, tagname, *args):
+#         return {'guid': self.plugin_guid, 'template': 'portalplugintemplate/gearbox_menu.html'}
